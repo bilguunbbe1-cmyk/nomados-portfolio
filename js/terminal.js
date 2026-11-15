@@ -116,6 +116,7 @@ const Terminal = (() => {
         const c = P.contact;
         print(`  email     <a href="mailto:${esc(c.email)}">${esc(c.email)}</a>`);
         if (c.github) print(`  github    ${link(c.github, c.github.replace(/^https?:\/\//, ''))}`);
+        if (c.youtube) print(`  youtube   ${link(c.youtube, c.youtube.replace(/^https?:\/\/(www\.)?/, ''))}`);
         if (c.linkedin) print(`  linkedin  ${link(c.linkedin, c.linkedin.replace(/^https?:\/\/(www\.)?/, ''))}`);
         if (c.instagram) print(`  instagram ${link(c.instagram, c.instagram.replace(/^https?:\/\/(www\.)?/, ''))}`);
       },

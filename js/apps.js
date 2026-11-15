@@ -23,6 +23,7 @@ const ICONS = {
   file:     ['#e6e9f2', '#9aa3b8', '<path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/>'],
   github:   ['#5d6584', '#1b1f33', '<path d="M9 19c-4 1.3-4-2-6-2.5M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1-.3-3.4 1.3a11.6 11.6 0 0 0-6 0C6.8 2.8 5.8 3.1 5.8 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4.4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/>'],
   linkedin: ['#6fb4ff', '#0a66c2', '<rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V16M8 7.5v.2M12 16v-3.2c0-1.4.9-2.3 2.1-2.3s1.9.9 1.9 2.3V16M12 10.5V16"/>'],
+  youtube:  ['#ff6b6b', '#d62828', '<rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10 9.2v5.6l4.8-2.8z" fill="#fff"/>'],
   instagram:['#ffb36b', '#d6336c', '<rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17 7v.1"/>']
 };
 
@@ -88,7 +89,7 @@ const APPS = {
           <dl class="facts">
             <div><dt>${t('about.loc')}</dt><dd>${esc(L(P.location))}</dd></div>
             <div><dt>${t('about.school')}</dt><dd>${esc(L(P.school))}</dd></div>
-            <div><dt>${t('about.status')}</dt><dd><span class="live-dot"></span>${esc(L(P.status))}</dd></div>
+            ${P.status ? `<div><dt>${t('about.status')}</dt><dd><span class="live-dot"></span>${esc(L(P.status))}</dd></div>` : ''}
           </dl>
           ${L(P.bio).map(p => `<p>${esc(p)}</p>`).join('')}
           <h4># ${t('about.journey')}</h4>
@@ -109,7 +110,7 @@ const APPS = {
       return `
       <div class="monitor">
         <div class="mon-stats">
-          <div class="stat"><span>${t('sk.uptime')}</span><b>${P.projects.length} ${t('sk.years')}</b></div>
+          <div class="stat"><span>${t('sk.uptime')}</span><b>${P.projects.filter(p => p.code).length} ${t('sk.years')}</b></div>
           <div class="stat"><span>${t('sk.coffee')}</span><b class="coffee">87%</b></div>
           <div class="stat"><span>${t('sk.bugs')}</span><b>∞</b></div>
         </div>
@@ -195,7 +196,7 @@ const APPS = {
             <div><dt>${t('pr.stack')}</dt><dd><ul class="chips">${p.stack.map(s => `<li>${esc(s)}</li>`).join('')}</ul></dd></div>
           </dl>
           <div class="btn-row">
-            ${extLink(p.demo, t('pr.demo'), 'btn primary')}
+            ${extLink(p.demo, p.demoLabel ? L(p.demoLabel) : t('pr.demo'), 'btn primary')}
             ${extLink(p.code, t('pr.code'), 'btn')}
           </div>
         </div>
@@ -209,7 +210,7 @@ const APPS = {
     title: () => t('app.contact'),
     render: () => {
       const c = P.contact;
-      const social = [['github', 'GitHub', c.github], ['linkedin', 'LinkedIn', c.linkedin], ['instagram', 'Instagram', c.instagram]].filter(s => s[2]);
+      const social = [['github', 'GitHub', c.github], ['youtube', 'YouTube', c.youtube], ['linkedin', 'LinkedIn', c.linkedin], ['instagram', 'Instagram', c.instagram]].filter(s => s[2]);
       return `
       <div class="mail">
         <aside class="mail-side">

@@ -13,10 +13,9 @@ window.PROFILE = {
   username: "bilguun",                                 // терминалд харагдах нэр
   role: { mn: "Full-stack хөгжүүлэгч", en: "Full-stack Developer" },
   tagline: {
-    mn: "Тал нутаг шиг уудам төсөөлөлтэй, код бүрдээ дэг журамтай.",
-    en: "Imagination as wide as the steppe, discipline in every line of code."
+    mn: "Unbalanced mentality",
+    en: "Unbalanced mentality"
   },
-  status: { mn: "Дадлагын боломж хайж байна", en: "Open to internships" },
   location: { mn: "Улаанбаатар, Монгол", en: "Ulaanbaatar, Mongolia" },
   school: { mn: "СЭЗИС · Мэдээллийн системийн менежмент", en: "UFE · Management Information Systems" },
 
@@ -105,6 +104,23 @@ window.PROFILE = {
       code: "https://github.com/bilguunbbe1-cmyk/studio-control"
     },
     {
+      id: "unbalanced-squad",
+      year: "2026",
+      title: { mn: "Unbalanced squad", en: "Unbalanced squad" },
+      type: { mn: "YouTube суваг", en: "YouTube channel" },
+      image: "assets/projects/unbalanced-squad.jpg",
+      short: { mn: "Blind date шоу, podcast бүтээдэг миний YouTube суваг", en: "My YouTube channel of blind-date shows and podcasts" },
+      desc: {
+        mn: "Код бичихээс гадна бүтээдэг миний YouTube суваг. Blind date шоу, «Glow up» цуврал, Unbalanced podcast зэрэг контентуудтай. 4.67K гаруй дагагч, 18 видео, хамгийн их үзэлттэй видео нь 150K гаруй үзэлттэй.",
+        en: "My YouTube channel, the thing I create when I'm not coding: blind-date shows, the \"Glow up\" series and the Unbalanced podcast. 4.67K+ subscribers, 18 videos, with the most-watched video past 150K views."
+      },
+      role: { mn: "Сувгийн эзэн, контент бүтээгч", en: "Channel owner, content creator" },
+      stack: ["YouTube", "Video", "Podcast"],
+      demo: "https://www.youtube.com/@Unbalancedsquad",
+      demoLabel: { mn: "YouTube-ээс үзэх", en: "Watch on YouTube" },
+      code: ""
+    },
+    {
       id: "nomados",
       year: "2026",
       title: { mn: "NomadOS портфолио", en: "NomadOS portfolio" },
@@ -125,7 +141,8 @@ window.PROFILE = {
   contact: {
     email: "bilguunbbe1@gmail.com",
     github: "https://github.com/bilguunbbe1-cmyk",
-    linkedin: "",                                      // хоосон бол харагдахгүй
+    youtube: "https://www.youtube.com/@Unbalancedsquad",
+    linkedin: "",                                     // хоосон бол харагдахгүй
     instagram: ""
   }
 };

@@ -86,7 +86,7 @@ const OS = (() => {
         <button class="btn primary" type="button" data-open="projects">${t('hero.cta1')}</button>
         <button class="btn glass" type="button" data-open="contact">${t('hero.cta2')}</button>
       </div>
-      <p class="hero-status"><span class="live-dot"></span>${esc(L(P.status))}</p>`;
+      ${P.status ? `<p class="hero-status"><span class="live-dot"></span>${esc(L(P.status))}</p>` : ''}`;
   }
 
   function renderIcons() {
