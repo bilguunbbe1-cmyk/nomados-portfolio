@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="mn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>NomadOS — Портфолио</title>
+  <meta name="description" content="Тал нутгийн үйлдлийн систем хэлбэрээр бүтээсэн хувийн портфолио вэбсайт.">
+  <meta name="theme-color" content="#141a3a">
+  <meta property="og:title" content="NomadOS — Портфолио">
+  <meta property="og:description" content="Цонх, терминал, шагай бүхий тал нутгийн үйлдлийн систем хэлбэрийн портфолио.">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Unbounded:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-theme="light">
+
+  <!-- 1. АСААХ / BOOT ДЭЛГЭЦ -->
+  <div id="power" class="power">
+    <button id="power-lang" class="power-lang" type="button">EN</button>
+    <div class="power-inner">
+      <img class="power-logo" src="assets/logo.svg" alt="" width="72" height="72">
+      <p class="power-os">NomadOS</p>
+      <h1 id="power-name" class="power-name"></h1>
+      <p id="power-role" class="power-role"></p>
+      <button id="power-btn" class="power-btn" type="button" aria-label="Power on">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v8"/><path d="M6.3 7.1a8 8 0 1 0 11.4 0"/></svg>
+      </button>
+      <p id="power-hint" class="power-hint"></p>
+    </div>
+    <pre id="bootlog" class="bootlog" aria-live="polite"></pre>
+  </div>
+
+  <!-- 2. DESKTOP -->
+  <main id="desktop" class="desktop" data-scene="day">
+    <div id="wallpaper" class="wallpaper" aria-hidden="true"></div>
+    <section id="hero" class="hero"></section>
+    <nav id="icons" class="icons" aria-label="Apps"></nav>
+    <div id="windows" class="windows"></div>
+  </main>
+
+  <!-- 3. TASKBAR -->
+  <footer id="taskbar" class="taskbar">
+    <button id="start-btn" class="start-btn" type="button" aria-haspopup="menu" aria-expanded="false">
+      <img src="assets/logo.svg" alt="" width="26" height="26"><span>NomadOS</span>
+    </button>
+    <div id="tasks" class="tasks"></div>
+    <div class="tray">
+      <button id="egg-btn" class="tray-btn egg-btn" type="button"></button>
+      <button id="sound-btn" class="tray-btn" type="button"></button>
+      <button id="lang-btn" class="tray-btn lang-btn" type="button"></button>
+      <button id="theme-btn" class="tray-btn" type="button"></button>
+      <button id="clock" class="clock" type="button"><b id="clock-time"></b><span id="clock-date"></span></button>
+    </div>
+  </footer>
+
+  <div id="start-menu" class="start-menu" role="menu" hidden></div>
+  <div id="ctx-menu" class="ctx-menu" role="menu" hidden></div>
+  <div id="toasts" class="toasts" aria-live="polite"></div>
+  <div id="crash" class="crash" hidden></div>
+
+  <noscript><p class="noscript">NomadOS ажиллахын тулд JavaScript шаардлагатай.</p></noscript>
+
+  <script src="data.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/scene.js"></script>
+  <script src="js/apps.js"></script>
+  <script src="js/terminal.js"></script>
+  <script src="js/windows.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
