@@ -117,7 +117,7 @@ window.PROFILE = {
       },
       role: { mn: "Санаа, дизайн, код", en: "Concept, design, code" },
       stack: ["HTML", "CSS", "Vanilla JS", "SVG"],
-      demo: "",                                            // хоосон бол "Демо" товч харагдахгүй
+      demo: "https://nomados-portfolio.vercel.app",
       code: "https://github.com/bilguunbbe1-cmyk/nomados-portfolio"
     }
   ],
