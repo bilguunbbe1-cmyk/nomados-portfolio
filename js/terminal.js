@@ -128,11 +128,10 @@ const Terminal = (() => {
       },
       neofetch() {
         const n = tx().neo;
-        const years = Math.max(1, new Date().getFullYear() - P.codingSince);
         const info = [
           `<b class="t-acc">${esc(user)}@nomad</b>`, '-----------------',
           `<b>${n.os}</b>: ${esc(P.osName)} 1.0`, `<b>${n.shell}</b>: nomad-sh`,
-          `<b>${n.uptime}</b>: ${years} ${t('sk.years')}`, `<b>${n.theme}</b>: ${document.body.dataset.theme} · ${Scene.current()}`,
+          `<b>${n.theme}</b>: ${document.body.dataset.theme} · ${Scene.current()}`,
           `<b>${n.projects}</b>: ${P.projects.length}`, `<b>${n.loc}</b>: ${esc(L(P.location))}`
         ];
         print(`<div class="neo"><pre class="t-acc">${esc(GER_ART)}</pre><div>${info.join('<br>')}</div></div>`);

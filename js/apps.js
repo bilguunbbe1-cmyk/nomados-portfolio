@@ -105,12 +105,11 @@ const APPS = {
     icon: 'skills', w: 620, h: 580,
     title: () => t('app.skills'),
     render: () => {
-      const years = Math.max(1, new Date().getFullYear() - P.codingSince);
       const groups = [...new Set(P.skills.map(s => s.group))];
       return `
       <div class="monitor">
         <div class="mon-stats">
-          <div class="stat"><span>${t('sk.uptime')}</span><b>${years} ${t('sk.years')}</b></div>
+          <div class="stat"><span>${t('sk.uptime')}</span><b>${P.projects.length} ${t('sk.years')}</b></div>
           <div class="stat"><span>${t('sk.coffee')}</span><b class="coffee">87%</b></div>
           <div class="stat"><span>${t('sk.bugs')}</span><b>∞</b></div>
         </div>

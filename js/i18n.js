@@ -34,7 +34,7 @@ const STRINGS = {
     'about.loc': 'Байршил', 'about.school': 'Сургууль', 'about.status': 'Төлөв',
     'about.journey': 'Замнал', 'about.langs': 'Хэлний мэдлэг', 'about.menu': 'Файл  Засах  Харах  Тусламж',
 
-    'sk.uptime': 'Кодлосон хугацаа', 'sk.years': 'жил', 'sk.coffee': 'Кофены түвшин', 'sk.bugs': 'Засварласан алдаа',
+    'sk.uptime': 'Байршуулсан апп', 'sk.years': 'live', 'sk.coffee': 'Кофены түвшин', 'sk.bugs': 'Засварласан алдаа',
     'sk.proc': 'Процесс', 'sk.load': 'Түвшин', 'sk.tools': 'Хэрэгслүүд', 'sk.graph': 'Урам зоригийн ачаалал — шууд',
     'grp.frontend': 'Frontend', 'grp.backend': 'Backend', 'grp.design': 'Дизайн',
 
@@ -123,7 +123,7 @@ const STRINGS = {
     'about.loc': 'Location', 'about.school': 'School', 'about.status': 'Status',
     'about.journey': 'Journey', 'about.langs': 'Languages', 'about.menu': 'File  Edit  View  Help',
 
-    'sk.uptime': 'Coding uptime', 'sk.years': 'years', 'sk.coffee': 'Coffee level', 'sk.bugs': 'Bugs fixed',
+    'sk.uptime': 'Apps shipped', 'sk.years': 'live', 'sk.coffee': 'Coffee level', 'sk.bugs': 'Bugs fixed',
     'sk.proc': 'Process', 'sk.load': 'Level', 'sk.tools': 'Tools', 'sk.graph': 'Inspiration load — live',
     'grp.frontend': 'Frontend', 'grp.backend': 'Backend', 'grp.design': 'Design',
 
