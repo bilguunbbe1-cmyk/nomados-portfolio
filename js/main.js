@@ -22,7 +22,7 @@ const OS = (() => {
     I18N.lang = v;
     Store.set('lang', v);
     document.documentElement.lang = v;
-    document.title = `${L(P.name)} — ${L(P.role)} · ${P.osName}`;
+    document.title = [L(P.name), L(P.role), P.osName].filter(Boolean).join(' · ');
     renderPower(); renderHero(); renderIcons(); renderTray(); tick();
     if (!$('#start-menu').hidden) renderStart();
     WM.rerenderAll();
@@ -33,6 +33,7 @@ const OS = (() => {
   function renderPower() {
     $('#power-name').textContent = L(P.name);
     $('#power-role').textContent = L(P.role);
+    $('#power-role').hidden = !L(P.role);          // чиглэл хоосон бол нууна
     $('#power-hint').textContent = t('power.hint');
     $('#power-lang').textContent = I18N.lang === 'mn' ? 'EN' : 'MN';
   }
@@ -80,7 +81,7 @@ const OS = (() => {
       <p class="hero-hi">${t('hero.hi')}</p>
       <h1 class="hero-name" aria-label="${esc(name)}">${[...name].map((ch, i) =>
         `<span aria-hidden="true" style="--i:${i}">${ch === ' ' ? '&nbsp;' : esc(ch)}</span>`).join('')}</h1>
-      <p class="hero-role">${esc(L(P.role))}</p>
+      ${L(P.role) ? `<p class="hero-role">${esc(L(P.role))}</p>` : ''}
       <p class="hero-tag">${esc(L(P.tagline))}</p>
       <div class="hero-cta">
         <button class="btn primary" type="button" data-open="projects">${t('hero.cta1')}</button>
@@ -95,7 +96,7 @@ const OS = (() => {
   }
 
   function renderDesktop() {
-    document.title = `${L(P.name)} — ${L(P.role)} · ${P.osName}`;
+    document.title = [L(P.name), L(P.role), P.osName].filter(Boolean).join(' · ');
     renderHero(); renderIcons(); renderTray(); tick();
   }
 
@@ -125,7 +126,7 @@ const OS = (() => {
     $('#start-menu').innerHTML = `
       <div class="sm-profile">
         <div class="avatar sm" aria-hidden="true"><span>${esc(P.initials)}</span></div>
-        <div><b>${esc(L(P.name))}</b><span>${esc(L(P.role))}</span></div>
+        <div><b>${esc(L(P.name))}</b>${L(P.role) ? `<span>${esc(L(P.role))}</span>` : ''}</div>
       </div>
       <p class="sm-label">${t('sm.apps')}</p>
       <div class="sm-grid">${[...DESKTOP_APPS, 'osinfo'].map(id =>

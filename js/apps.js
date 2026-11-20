@@ -85,7 +85,7 @@ const APPS = {
         <article class="np-page">
           <p class="np-comment">// about_me.txt — ${esc(L(P.name))}</p>
           <h3 class="np-name">${esc(L(P.name))}</h3>
-          <p class="np-role">${esc(L(P.role))}</p>
+          ${L(P.role) ? `<p class="np-role">${esc(L(P.role))}</p>` : ''}
           <dl class="facts">
             <div><dt>${t('about.loc')}</dt><dd>${esc(L(P.location))}</dd></div>
             <div><dt>${t('about.school')}</dt><dd>${esc(L(P.school))}</dd></div>

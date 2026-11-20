@@ -11,7 +11,7 @@ window.PROFILE = {
   name: { mn: "Билгүүн", en: "Bilguun" },
   initials: "Б",                                       // аватар дээрх үсэг
   username: "bilguun",                                 // терминалд харагдах нэр
-  role: { mn: "Full-stack хөгжүүлэгч", en: "Full-stack Developer" },
+  role: { mn: "", en: "" },                           // чиглэл — хоосон бол сайт дээр харагдахгүй
   tagline: {
     mn: "Unbalanced mentality",
     en: "Unbalanced mentality"
@@ -21,11 +21,11 @@ window.PROFILE = {
 
   bio: {
     mn: [
-      "Сайн байна уу! Би Билгүүн — СЭЗИС-ийн оюутан, full-stack хөгжүүлэгч. React дээр интерфэйс бүтээж, Supabase эсвэл Node.js/Express дээр backend бичээд, санаагаа бодитоор ажилладаг, интернэтэд байршсан апп болгох дуртай.",
+      "Сайн байна уу! Би Билгүүн — СЭЗИС-ийн оюутан. React дээр интерфэйс бүтээж, Supabase эсвэл Node.js/Express дээр backend бичээд, санаагаа бодитоор ажилладаг, интернэтэд байршсан апп болгох дуртай.",
       "Төсөл бүрдээ жинхэнэ асуудлаас эхэлдэг: хуурамч цүнхнээс хамгаалах баталгааны сериал дугаар, тэнхимийн түүхийг хадгалах дижитал музей, продакшны багийн төсөл, санхүүг нэг дор удирдах самбар. Энэ портфолиог ч ердийн сайт бус, жижигхэн ертөнц болгохыг зорьсон."
     ],
     en: [
-      "Hi! I'm Bilguun — a UFE student and full-stack developer. I build interfaces in React and backends with Supabase or Node.js/Express, and I love turning ideas into apps that are actually live on the internet.",
+      "Hi! I'm Bilguun — a UFE student. I build interfaces in React and backends with Supabase or Node.js/Express, and I love turning ideas into apps that are actually live on the internet.",
       "Each project starts from a real problem: serial-number certificates against counterfeit bags, a digital museum for my department's history, a dashboard for a production team's projects and finances. This portfolio tries to be a tiny world rather than just another website."
     ]
   },
@@ -34,6 +34,7 @@ window.PROFILE = {
     { year: "2026.08", mn: "Studio Control — продакшны багийн удирдлагын самбар (Express + SQLite)", en: "Studio Control — a production team dashboard (Express + SQLite)" },
     { year: "2026.11", mn: "ISM Digital Museum — тэнхимийн интерактив музей (React + Supabase)", en: "ISM Digital Museum — an interactive department museum (React + Supabase)" },
     { year: "2026.11", mn: "Maison Erdene — Stripe төлбөртэй онлайн дэлгүүр", en: "Maison Erdene — an online shop with Stripe payments" },
+    { year: "2026.11", mn: "UN!BALANCED, ШИЙДНИЙ АХ — YouTube сувгуудын вэбсайт", en: "UN!BALANCED, ШИЙДНИЙ АХ — websites for YouTube channels" },
     { year: "2026.11", mn: "NomadOS — та яг одоо дотор нь байна", en: "NomadOS — you're inside it right now" }
   ],
 
@@ -102,6 +103,38 @@ window.PROFILE = {
       stack: ["React", "Vite", "Express", "SQLite", "JWT"],
       demo: "https://studio-control-khaki.vercel.app",
       code: "https://github.com/bilguunbbe1-cmyk/studio-control"
+    },
+    {
+      id: "shiidnii-site",
+      year: "2026",
+      title: { mn: "ШИЙДНИЙ АХ — вэбсайт", en: "ШИЙДНИЙ АХ — website" },
+      type: { mn: "Streetball цувралын сайт", en: "Streetball series site" },
+      image: "assets/projects/shiidnii-site.jpg",
+      short: { mn: "Шидэлтийн тоглоом, УБ-ын шийдний газрын зурагтай сайт", en: "A site with a shooting game and a UB court map" },
+      desc: {
+        mn: "Монголын гудамжны сагсан бөмбөгийн «Шийдний ах» цувралын сайт. Hero хэсэгт бөмбөг шидэж оноо цуглуулдаг тоглоом, Улаанбаатарын 14 шийдийг тэмдэглэсэн интерактив газрын зураг, LED скорборд, 4 платформын статистик, Хасаагийн түүх, үнийн санал авах маягттай (бөглөсөн мэдээлэл имэйл рүү очно).",
+        en: "A site for the Mongolian streetball series «Шийдний ах»: a shooting mini-game in the hero, an interactive map of 14 Ulaanbaatar courts, an LED scoreboard, stats from 4 platforms, the creator's story and a quote request form that delivers to email."
+      },
+      role: { mn: "Санаа, дизайн, код", en: "Concept, design, code" },
+      stack: ["HTML", "CSS", "Vanilla JS", "SVG", "FormSubmit"],
+      demo: "https://shiidnii-akh.vercel.app",
+      code: "https://github.com/bilguunbbe1-cmyk/shiidnii-akh"
+    },
+    {
+      id: "unbalanced-site",
+      year: "2026",
+      title: { mn: "UN!BALANCED — вэбсайт", en: "UN!BALANCED — website" },
+      type: { mn: "YouTube сувгийн сайт", en: "YouTube channel site" },
+      image: "assets/projects/unbalanced-site.jpg",
+      short: { mn: "Хэзээ ч тэнцдэггүй дүүжинтэй сувгийн сайт", en: "A channel site with a seesaw that never balances" },
+      desc: {
+        mn: "Unbalanced squad сувгийн сайт — нэр шигээ «тэнцвэргүй». Хулганы зүг хазайдаг лого, шоуны форматуудыг (1 GIRL & 5 MEN, 6×6) ачаалж тухайн дугаарыг тоглуулдаг хэзээ ч тэнцдэггүй дүүжин, сайт дотроо видео тоглуулагч, 4 платформын нийт 11K+ дагагч, 3M+ үзэлтийг тооцдог статистик.",
+        en: "A site for the Unbalanced squad channel that is, like its name, off-balance: a wordmark that tips toward the cursor, a seesaw that loads show formats (1 GIRL & 5 MEN, 6×6) and plays that episode but never balances, an in-site video player, and stats totalling 11K+ followers and 3M+ views across 4 platforms."
+      },
+      role: { mn: "Санаа, дизайн, код", en: "Concept, design, code" },
+      stack: ["HTML", "CSS", "Vanilla JS", "YouTube embed"],
+      demo: "https://unbalanced-squad.vercel.app",
+      code: "https://github.com/bilguunbbe1-cmyk/unbalanced-squad"
     },
     {
       id: "unbalanced-squad",

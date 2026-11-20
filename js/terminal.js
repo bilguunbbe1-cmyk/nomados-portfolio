@@ -100,7 +100,7 @@ const Terminal = (() => {
         Object.entries(tx().cmds).forEach(([c, d]) => print(`  <span class="t-cmd">${c.padEnd(10)}</span><span class="t-dim">${d}</span>`));
       },
       about() {
-        print(`<b>${esc(L(P.name))}</b> — <span class="t-acc">${esc(L(P.role))}</span>`);
+        print(`<b>${esc(L(P.name))}</b>${L(P.role) ? ` — <span class="t-acc">${esc(L(P.role))}</span>` : ''}`);
         print(esc(L(P.tagline)), 't-dim');
         L(P.bio).forEach(p => print(esc(p)));
       },
